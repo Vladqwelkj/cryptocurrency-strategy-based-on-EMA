@@ -7,6 +7,13 @@ def SMA(data, smaPeriod):
     sub_result = [np.mean(data[i - smaPeriod + 1: i + 1]) for i in our_range]
     return np.array(empty_list + sub_result)
 
+def EMA(values, window):
+    weights = np.exp(np.linspace(-1., 0., window))
+    weights /= weights.sum()
+    a =  np.convolve(values, weights, mode='full')[:len(values)]
+    a[:window] = a[window]
+    return a
+
 def ATR(period, H, L):
 	TR, aver = [], []
 	for ind, low in enumerate(L):

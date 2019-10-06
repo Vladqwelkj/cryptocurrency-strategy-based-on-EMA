@@ -20,15 +20,16 @@ def addPoint(pose=None, index=None, price=None, chart_on=True):
 def backtest(H,L,C,
 			src_enter_long, src_enter_short,
 			src_sma,
-			sma_n, atr_n, confirm_n, atr_stop_x,
+			sma_n, atr_n, confirm_n, atr_stop_x, atr_stop_after_take,
 			parts_exit,
+			stop_without_loss_after_take=True,
 			fee_limit=-0.00025, fee_market=0.00075, slip=3.0,
 			chart_on=True, procent_one_deal=1):
 
-	sma = ta_indicators.SMA(src_sma, sma_n)
+	sma = ta_indicators.EMA(src_sma, sma_n)
 	atr = ta_indicators.ATR(atr_n, H, L)
 
-	balance = 1000
+	balance = 70
 	losses, profits = 0, 0
 
 	fee_limit *= procent_one_deal
@@ -62,9 +63,12 @@ def backtest(H,L,C,
 ########
 				for take in position['takes']:
 					if H[i] > take['price'] and not take['is_filled']:
+						atr_stop_x = atr_stop_after_take
+						if (position['stop'] != position['enter']) and stop_without_loss_after_take:
+							position['stop'] = position['enter']
 						addPoint(pose='Take', index=i, price=take['price'], chart_on=chart_on)
 						result = ((take['price'] / (position['enter']))
-							- fee_limit/100*2) * take['amount'] - take['amount']
+							- fee_limit*2/100) * take['amount'] - take['amount']
 						position['amount'] = position['amount'] - take['amount']
 						take['is_filled'] = True
 						if result > 0:
@@ -88,7 +92,10 @@ def backtest(H,L,C,
 				position['stop'] = close+atr[i]*atr_stop_x
 ########
 				for take in position['takes']:
+					atr_stop_x = atr_stop_after_take
 					if L[i] < take['price']  and not take['is_filled']:
+						if (position['stop'] != position['enter']) and stop_without_loss_after_take:
+							position['stop'] = position['enter']
 						addPoint(pose='Take', index=i, price=take['price'], chart_on=chart_on)
 						result = (position['enter'] / take['price']
 							- fee_limit/100*2) * take['amount'] - take['amount']
@@ -134,11 +141,11 @@ def backtest(H,L,C,
 			except:
 				pass
 			addPoint(pose='Long', index=i, price=close, chart_on=chart_on)
-			position = {'is_long': True, 'enter': close-slip, 'takes':[], 'stop':close-atr[i]*atr_stop_x, 'amount': balance*procent_one_deal, 'first': False}
+			position = {'is_long': True, 'enter': close-slip, 'takes':[], 'stop':close-atr[i]*atr_stop_x, 'amount': balance, 'first': False}
 
 			for proc in parts_exit.keys():
 				position['takes'].append({'price': close*(1+proc/100),
-										 'amount': parts_exit[proc]/sum_parts *balance*procent_one_deal,
+										 'amount': parts_exit[proc]/sum_parts *balance,
 										 'is_filled': False})
 
 
@@ -159,11 +166,11 @@ def backtest(H,L,C,
 			except:
 				pass
 			addPoint(pose='Short', index=i, price=close, chart_on=chart_on)
-			position = {'is_long': False, 'enter': close+slip, 'takes':[], 'stop':close+atr[i]*atr_stop_x, 'amount': balance*procent_one_deal, 'first': False}
+			position = {'is_long': False, 'enter': close+slip, 'takes':[], 'stop':close+atr[i]*atr_stop_x, 'amount': balance, 'first': False}
 
 			for proc in parts_exit.keys():
 				position['takes'].append({'price': close*(1-proc/100),
-										 'amount': parts_exit[proc]/sum_parts *balance*procent_one_deal,
+										 'amount': parts_exit[proc]/sum_parts *balance,
 										 'is_filled': False})
 
 
