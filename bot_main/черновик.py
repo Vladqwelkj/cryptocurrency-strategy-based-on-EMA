@@ -1,3 +1,28 @@
+import bitmex
+import config
+CLIENT = bitmex.bitmex(
+    test=False,
+    api_key=config.API_KEY,
+    api_secret=config.API_SECRET)
+print(dir(CLIENT.Order))
+'''
+
+import sqlite3
+
+from datetime import datetime
+conn = sqlite3.connect(config.DB_NAME) # или :memory: чтобы сохранить в RAM
+cursor = conn.cursor()
+
+cursor.execute("""INSERT INTO trades (is_long)
+                  VALUES (1)"""
+               )
+ 
+# Сохраняем изменения
+conn.commit()
+
+
+
+
 class C():
 	t = 1
 	def __init__(self):
@@ -45,4 +70,4 @@ def setup_logger():
 
 
 if __name__ == "__main__":
-    run()
+    run()'''

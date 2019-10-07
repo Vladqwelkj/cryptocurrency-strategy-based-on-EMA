@@ -28,7 +28,7 @@ parts_exit = {# proc_exit, part_of_position
 7: 1,
 10: 1,
 '''
-OHLC = get_data(59000, 62000, 'txt.txt')
+OHLC = get_data(50000, 62000, 'txt.txt')
 result = backtest(H=OHLC['high'], L=OHLC['low'], C=OHLC['close'],
 			src_enter_long=OHLC['close'], src_enter_short=OHLC['close'],
 			src_sma=OHLC['close'],

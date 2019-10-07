@@ -11,8 +11,9 @@ cursor.execute("""CREATE TABLE trades
                   is_long boolean,
                   enter text, 
                   targets text, 
-                  stop text)
+                  stop text,
+                  qty INTEGER)
                """)
 #json massive {order_id, is_filled} -stop
-#json massive {order_id, is_filled} -targets
-#json massive {order_id, start_price, in_fact} -enter
+#json massive [{order_id, is_filled, qty}, ...] -targets
+#json massive {order_id, start_price, fact_price} -enter

@@ -37,12 +37,12 @@ def getting_new_ohlc_in_15min():
 					order_manager.update_stop()
 					add_new_price(tmp_price_for_convert)
 					
+
 					signal = is_signal()
 					if signal['is_long']:
 						order_manager.long()
 					if signal['is_short']:
 						order_manager.short()
-
 
 
 					if counter_of_5min > 90: #есло прошло больше 450 минут, переподключиться
@@ -109,7 +109,6 @@ def is_signal():
 	global OHLC
 	ema_source = OHLC['close']
 	enter_source = OHLC['close']
-
 	ema = ta_indicators.EMA(ema_source, config.EMA_PERIOD)
 
 	is_long = True

@@ -7,11 +7,23 @@ import logging
 from utils import thread_decor
 import db_interface
 import config
+from logic import OHLC
 
 CLIENT = bitmex.bitmex(
 	test=False,
 	api_key=config.API_KEY,
 	api_secret=config.API_SECRET)
+
+
+AMOUNT_FOR_TRADING = None
+def update_amount_for_trading():
+	AMOUNT_FOR_TRADING = (
+		utils.usd_balance(CLIENT, OHLC['close'][-1])
+		* (config.PERCENT_CAPITAL_FOR_TRADING/100))
+	AMOUNT_FOR_TRADING -= AMOUNT_FOR_TRADING % sum(config.PARTS_EXIT.values())
+		 
+
+
 
 @thread_decor
 def update_stop():
@@ -30,18 +42,21 @@ def check_last_stop():
 @thread_decor
 def long():
 	logging.info('make long')
+	update_amount_for_trading()
 
 
 @thread_decor
 def short():
 	logging.info('make short')
+	update_amount_for_trading()
+
 
 @thread_decor
-def make_takes():
+def make_takes(is_long):
 	logging.info('make takes')
 
 @thread_decor
-def make_stop():
+def make_stop(is_longc):
 	logging.info('make stop')
 
 
