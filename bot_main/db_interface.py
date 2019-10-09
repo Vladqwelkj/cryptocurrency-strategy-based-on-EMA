@@ -32,7 +32,7 @@ def new_enter_db(is_long,
                     enter, enter_in_fact,
                     qty,
                     order_id):
-    lobal conn, cursor
+    global conn, cursor
     logging.debug('add new enter to db')
     cursor.execute("""INSERT INTO trades (timestamp, is_long, enter, qty)
                   VALUES ({}, {}, {}, {})""".format(datetime.utcnow(),

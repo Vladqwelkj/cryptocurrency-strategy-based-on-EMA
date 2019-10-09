@@ -11,7 +11,7 @@ def thread_decor(my_func):
 def error_handler(func):
     err_now = 0
     def wrapper(*args, **kwargs):
-        while err_now<MAX_ERR:
+        while err_now<6:
             try:
                 func(*args, **kwargs)
             except Exception as er:
@@ -22,8 +22,9 @@ def error_handler(func):
     return wrapper
 
 
+
 @error_handler
-def status_by_id(client, ordersID):
+def status_by_id(client, ordersID): #принмает список ордеровИД
     global TIMEOUT_ERROR, MAX_ERR
     logging.debug('orders to check: '+str(ordersID))
     result = {}
@@ -47,9 +48,8 @@ def usd_balance(client, btcusd_price):
 
 @error_handler
 def limit_order(client, side, orderQty, price, execInst='ParticipateDoNotInitiate', symbol='XBTUSD'):
-    global TIMEOUT_ERROR, MAX_ERR
     logging.debug('limit order: side %s, orderQty: %d, price %.1f, execInst %s'%(side, orderQty, price, execInst))
-    out = client.Order.Order_new( #take (limit)
+    out = client.Order.Order_new( #enter (limit)
                                 symbol = symbol,
                                 side = side,
                                 orderQty = orderQty,
@@ -59,7 +59,6 @@ def limit_order(client, side, orderQty, price, execInst='ParticipateDoNotInitiat
                                 ).result()[0]
     logging.debug('limit made')
     return out
-
 
 
 @error_handler
@@ -85,5 +84,20 @@ def order_cancel(client, orderID):
     return out
 
 
+@error_handler
 def edit_order_price(client, orderID, new_price):
-    
+    logging.debug('amend order. ID:%s, price%s'%(orderID, new_price))
+    client.Order.Order_amend(orderID=orderID,
+                             price=new_price).result()[0]
+    logging.debug('amended')
+
+
+@error_handler
+def get_bid_ask_price():
+    global SYMBOL
+    logging.debug('getting bid/ask')
+    data = requests.get(
+        'https://www.bitmex.com/api/v1/orderBook/L2?symbol=%s&depth=1'%(SYMBOL)
+        ).json()
+    logging.debug('bid/ask gotten')
+    return {'bid':data[1]['price'], 'ask':data[0]['price']}

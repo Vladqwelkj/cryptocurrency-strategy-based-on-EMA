@@ -1,0 +1,390 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"odre",
+				"orderID"
+			],
+			[
+				"A",
+				"AMOUNT_FOR_TRADING"
+			],
+			[
+				"enter",
+				"enter_in_fact"
+			],
+			[
+				"for",
+				"for_send"
+			],
+			[
+				"order",
+				"order_id"
+			],
+			[
+				"is",
+				"is_filled"
+			],
+			[
+				"entr",
+				"enter_in_fact"
+			],
+			[
+				"add",
+				"add_new_price"
+			],
+			[
+				"tm",
+				"tmp_price_for_convert"
+			],
+			[
+				"thread",
+				"thread_decor"
+			],
+			[
+				"mess",
+				"message"
+			],
+			[
+				"fee",
+				"fee_market"
+			],
+			[
+				"b",
+				"balance"
+			],
+			[
+				"pro",
+				"procent_changes"
+			],
+			[
+				"pr",
+				"procent_one_deal"
+			],
+			[
+				"bal",
+				"balance"
+			],
+			[
+				"max",
+				"max_papers_profits"
+			],
+			[
+				"reply",
+				"reply_on_review"
+			],
+			[
+				"TO",
+				"to_new_reviews"
+			],
+			[
+				"sma",
+				"sma"
+			],
+			[
+				"ba",
+				"balance_changes"
+			],
+			[
+				"ta",
+				"take"
+			],
+			[
+				"take",
+				"takes"
+			],
+			[
+				"s",
+				"sum_parts"
+			],
+			[
+				"atr",
+				"atr_stop_x"
+			],
+			[
+				"part",
+				"parts_exit"
+			],
+			[
+				"par",
+				"parts_exit"
+			],
+			[
+				"src",
+				"src_enter_short"
+			],
+			[
+				"pric",
+				"pricesListLow"
+			],
+			[
+				"price",
+				"pricesListHigh"
+			],
+			[
+				"bala",
+				"balance"
+			],
+			[
+				"pri",
+				"pricesListHigh"
+			],
+			[
+				"iND",
+				"Indicators"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/python3.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/python3.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/vlad/Desktop/fixing-over-the-sma-strategy_backtest/bot_main/config.py",
+		"/home/vlad/Desktop/fixing-over-the-sma-strategy_backtest/bot_main/черновик.py",
+		"/home/vlad/Desktop/fixing-over-the-sma-strategy_backtest/bot_main/utils.py",
+		"/home/vlad/Desktop/fixing-over-the-sma-strategy_backtest/bot_main/run.py",
+		"/home/vlad/Desktop/fixing-over-the-sma-strategy_backtest/bot_main/order_manager.py",
+		"/home/vlad/Desktop/fixing-over-the-sma-strategy_backtest/bot_main/logic.py",
+		"/home/vlad/Desktop/fixing-over-the-sma-strategy_backtest/bot_main/db_interface.py",
+		"/home/vlad/Desktop/fixing-over-the-sma-strategy_backtest/tester/set_and_start.py",
+		"/home/vlad/Desktop/fixing-over-the-sma-strategy_backtest/bot_main/ta_indicators.py",
+		"/home/vlad/Desktop/fixing-over-the-sma-strategy_backtest/tester/logic.py",
+		"/home/vlad/Desktop/learn-haskell/baby.hs",
+		"/home/vlad/Desktop/olimp.py",
+		"/home/vlad/Desktop/fixing-over-the-sma-strategy_backtest/JMA_ATR-bot-BITMEX/main-bot-jmaAndAtr.py",
+		"/home/vlad/Desktop/fixing-over-the-sma-strategy_backtest/tester/GetPriceBitmex.PY",
+		"/home/vlad/Desktop/zz2-backtest/zz2-test.py",
+		"/home/vlad/Desktop/adm-bot/admin-bot — копия/bot/states/main/menu.py",
+		"/home/vlad/Desktop/adm-bot/admin-bot — копия/bot/states/handler.py",
+		"/home/vlad/Desktop/adm-bot/admin-bot — копия/bot/states/names.py",
+		"/home/vlad/Desktop/adm-bot/admin-bot — копия/bot/states/hello_habit/menu.py",
+		"/home/vlad/Desktop/adm-bot/admin-bot — копия/bot/states/hello_habit/contacts/contacts.py",
+		"/home/vlad/Desktop/adm-bot/admin-bot — копия/bot/states/hello_habit/message/send_log.py",
+		"/home/vlad/Desktop/adm-bot/admin-bot — копия/bot/states/hello_habit/message/message_write.py",
+		"/home/vlad/Desktop/adm-bot/admin-bot — копия/bot/states/hello_habit/message/message_send.py",
+		"/home/vlad/Desktop/adm-bot/admin-bot — копия/bot/states/hello_habit/reviews/menu.py",
+		"/home/vlad/Desktop/adm-bot/admin-bot — копия/bot/states/hello_habit/reviews/review_reply.py",
+		"/home/vlad/Desktop/adm-bot/admin-bot — копия/bot/states/hello_habit/analytics/select_custom_period.py",
+		"/home/vlad/Desktop/adm-bot/admin-bot — копия/bot/states/hello_habit/analytics/menu.py",
+		"/home/vlad/Desktop/fixing_on_sma/fixing-over-the-sma-strategy_backtest/logic.py",
+		"/home/vlad/Desktop/fixing_on_sma/fixing-over-the-sma-strategy_backtest/get_data.py",
+		"/home/vlad/Desktop/fixing_on_sma/fixing-over-the-sma-strategy_backtest/set_and_start.py",
+		"/home/vlad/Desktop/fixing_on_sma/fixing-over-the-sma-strategy_backtest/fix_manage_to_procent.py",
+		"/home/vlad/Desktop/adm-bot/admin-bot — копия/bot/resources/messages.py",
+		"/home/vlad/Desktop/adm-bot/admin-bot — копия/.env",
+		"/home/vlad/Desktop/p.py",
+		"/home/vlad/Desktop/fixing_on_sma/fixing-over-the-sma-strategy_backtest/PriceData/gazp15min.txt",
+		"/home/vlad/Desktop/fixing_on_sma/get_data.py",
+		"/home/vlad/Desktop/fixing_on_sma/ta_indicators.py",
+		"/home/vlad/Desktop/fixing_on_sma/set_and_start.py",
+		"/home/vlad/Desktop/fixing_on_sma/logic.py",
+		"/home/vlad/Desktop/amd-bot/admin-bot/bot/resources/keyboards.py",
+		"/home/vlad/Desktop/amd-bot/admin-bot/bot/states/hello_habit/analytics/send_analytics.py",
+		"/home/vlad/Desktop/right_way_to_push.txt",
+		"/home/vlad/Desktop/admin-bot/hellohabiit-telegram-bot-admin-vladqwelkj/db.py",
+		"/home/vlad/Desktop/admin-bot/hellohabiit-telegram-bot-admin-vladqwelkj/bot/resources/messages.py",
+		"/home/vlad/Desktop/admin-bot/hellohabiit-telegram-bot-admin-vladqwelkj/bot/states/hello_habit/analytics/menu.py",
+		"/home/vlad/Desktop/admin-bot/hellohabiit-telegram-bot-admin-vladqwelkj/bot/states/hello_habit/menu.py",
+		"/home/vlad/Desktop/admin-bot/hellohabiit-telegram-bot-admin-vladqwelkj/bot/states/handler.py",
+		"/home/vlad/Desktop/admin-bot/hellohabiit-telegram-bot-admin-vladqwelkj/.env",
+		"/home/vlad/Desktop/admin-bot/hellohabiit-telegram-bot-admin-vladqwelkj/run.py",
+		"/home/vlad/Desktop/admin-bot/hellohabiit-telegram-bot-admin-vladqwelkj/bot/resources/keyboards.py",
+		"/home/vlad/Desktop/admin-bot/hellohabiit-telegram-bot-admin-vladqwelkj/bot/states/hello_habit/analytics.py",
+		"/home/vlad/Desktop/admin-bot/hellohabiit-telegram-bot-admin-vladqwelkj/bot/states/names.py",
+		"/home/vlad/Desktop/admin-bot/hellohabiit-telegram-bot-admin-vladqwelkj/config.py",
+		"/home/vlad/Desktop/untitled.py",
+		"/home/vlad/Desktop/admin-bot/hellohabiit-telegram-bot-admin-vladqwelkj/bot/states/add_habit/habit_week_days.py",
+		"/home/vlad/Desktop/admin-bot/hellohabiit-telegram-bot-admin-vladqwelkj/extensions/weekdays_keyboard.py",
+		"/home/vlad/Desktop/README.md",
+		"/home/vlad/Desktop/zz2-backtest/generateCoomb.py",
+		"/home/vlad/Desktop/zz2-backtest/zz2-test_fix_amount.py",
+		"/home/vlad/Desktop/zz2-backtest/func.py",
+		"/home/vlad/Desktop/изучаю линукс.txt",
+		"/home/vlad/Desktop/neurotext.py",
+		"/home/vlad/Desktop/zz2-test_fix_amount.py",
+		"/home/vlad/Desktop/proc.py",
+		"/home/vlad/Desktop/print('hello').py",
+		"/home/vlad/.config/sublime-text-3/Packages/User/python3.sublime-build"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 108.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "bot.sublime-workspace",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 204.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
