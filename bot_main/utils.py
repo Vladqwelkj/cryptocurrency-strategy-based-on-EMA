@@ -24,7 +24,7 @@ def error_handler(func):
 
 
 @error_handler
-def status_by_id(client, ordersID): #принмает список ордеровИД
+def status_by_id(client,  ordersID): #принмает список ордеровИД
     global TIMEOUT_ERROR, MAX_ERR
     logging.debug('orders to check: '+str(ordersID))
     result = {}
@@ -32,7 +32,7 @@ def status_by_id(client, ordersID): #принмает список ордеро�
                                         count= 50,
                                         reverse=True).result()[0]
     for order in orders:
-        if order['orderID'] in orders:
+        if order['orderID'] in ordersID:
             result[order['orderID']] = order['ordStatus']
     logging.debug('out: '+str(result))
     return result
@@ -99,5 +99,13 @@ def get_bid_ask_price():
     data = requests.get(
         'https://www.bitmex.com/api/v1/orderBook/L2?symbol=%s&depth=1'%(SYMBOL)
         ).json()
-    logging.debug('bid/ask gotten')
+    logging.debug('bid/ask gotten {} {}'.format(data[1]['price'], data[0]['price']))
     return {'bid':data[1]['price'], 'ask':data[0]['price']}
+
+
+@error_handler
+def get_position_qty(client):
+    logging.debug('get_position_qty')
+    out = CLIENT.Position.Position_get(filter=json.dumps({'symbol':'XBTUSD'})).result()[0][0]['currentQty']
+    logging.debug('position: '+str(out))
+    return out  # отрицательное число при шорте.

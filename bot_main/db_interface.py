@@ -39,7 +39,7 @@ def new_enter_db(is_long,
                                                     1 if is_long else 0,
                                                     json.dumps({'order_id': order_id, 
                                                                 'start_price': enter,
-                                                                'fact_price': enter_in_fact})
+                                                                'fact_price': enter_in_fact}),
                                                     qty))
     conn.commit()
     logging.debug('enter added to db')
