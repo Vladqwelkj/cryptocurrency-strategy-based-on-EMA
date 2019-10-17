@@ -1,1 +1,1 @@
-![Explanation of the strategy]https://gitlab.com/vladqwelkj/fixing-over-the-sma-strategy_backtest/raw/master/explanation.png)
+![Explanation of the strategy](https://gitlab.com/vladqwelkj/fixing-over-the-sma-strategy_backtest/raw/master/explanation.png)
